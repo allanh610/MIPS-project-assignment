@@ -10,3 +10,9 @@ comma: .asciiz ",'
 # Prints a string
 print_string:
     li $v0, 4
+    syscall
+    jr $ra
+
+# Reads an integer from the console
+read_int:
+    li $v0, 5
