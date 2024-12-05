@@ -52,3 +52,10 @@ fibonacci_sequence:   # Prints the first numbers in the Fibonacci sequence
     # Prints 0 and 1 separately
     la $a0, fib_msg
     jal print_string
+
+    li $v0, 1
+    move $a0, $t2
+    syscall
+
+    la $a0, comma
+    jal print_string
