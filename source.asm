@@ -27,3 +27,14 @@ main:                  # Prompts the user for an input
 input_loop:            # Reads integer "N" from user
     jal read_int
     move $t0, $v0
+
+    # Checks if N is legal
+    li $t1, 25
+    blt $t0, $t1, illegal
+
+    # If N is legal, goes to next step
+    j fibonacci_sequence
+
+illegal:			   # Prints error message
+    la $a0, invalid_msg
+    jal print_string
