@@ -84,3 +84,5 @@ fib_loop:
     j fib_loop
 
 end_fib:
+    li $v0, 10
+    syscall
