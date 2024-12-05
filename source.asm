@@ -75,3 +75,12 @@ fib_loop:
     li $v0, 1
     move $a0, $t5
     syscall
+
+    # Update numbers for the next iteration
+    move $t2, $t3
+    move $t3, $t5
+    addi $t4, $t4, 1
+
+    j fib_loop
+
+end_fib:
