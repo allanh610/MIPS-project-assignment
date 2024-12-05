@@ -66,3 +66,12 @@ fibonacci_sequence:   # Prints the first numbers in the Fibonacci sequence
 
 fib_loop:
     bge $t4, $t0, end_fib
+
+    add $t5, $t2, $t3
+
+    la $a0, comma
+    jal print_string
+
+    li $v0, 1
+    move $a0, $t5
+    syscall
