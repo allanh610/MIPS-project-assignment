@@ -38,3 +38,11 @@ input_loop:            # Reads integer "N" from user
 illegal:			   # Prints error message
     la $a0, invalid_msg
     jal print_string
+
+    la $a0, prompt
+    jal print_string
+
+    j input_loop
+
+fibonacci_sequence:   # Prints the first numbers in the Fibonacci sequence
+    li $t2, 0
