@@ -46,3 +46,9 @@ illegal:			   # Prints error message
 
 fibonacci_sequence:   # Prints the first numbers in the Fibonacci sequence
     li $t2, 0
+    li $t3, 1
+    li $t4, 2
+
+    # Prints 0 and 1 separately
+    la $a0, fib_msg
+    jal print_string
